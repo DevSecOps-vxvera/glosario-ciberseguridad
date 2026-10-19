@@ -1,0 +1,2888 @@
+{
+  "metadata": {
+    "title": "Glosario técnico de ciberseguridad para Delegados de Protección de Datos",
+    "author": "Víctor Vera",
+    "course": "Fundamentos, normativa y aplicación práctica de la ciberseguridad",
+    "module": "Módulo 1: Fundamentos de la ciberseguridad",
+    "source": "Modulo1_Fundamentos_Ciberseguridad_ECOTEC_Victor_Vera.pptx, diapositivas 32–123",
+    "notes": "Material educativo. Diferenciar las definiciones expresas de la ley de sus conceptos operativos y de las explicaciones técnicas. Las obligaciones de reporte de incidentes (art. 20-G) y de vulneraciones de datos personales (LOPDP) se evalúan por separado. La ley de 2026 reforma la Ley Orgánica para la Transformación Digital y Audiovisual.",
+    "updated": "2026-10-19",
+    "version": "2.0",
+    "law2026": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad · Quinto Suplemento R.O. N.º 290, 22 de mayo de 2026",
+    "originalTerms": 167,
+    "newTerms2026": 33,
+    "newTotal": 200
+  },
+  "categories": [
+    {
+      "id": "cat-01",
+      "order": 1,
+      "name": "Lenguaje base / CIA",
+      "count": 18,
+      "description": "Los conceptos que ayudan a comprender qué se protege y por qué.",
+      "icon": "shield",
+      "tag": "Fundamentos"
+    },
+    {
+      "id": "cat-02",
+      "order": 2,
+      "name": "Ataques y adversarios",
+      "count": 22,
+      "description": "Actores, técnicas y escenarios que pueden comprometer la seguridad.",
+      "icon": "target",
+      "tag": "Amenazas"
+    },
+    {
+      "id": "cat-03",
+      "order": 3,
+      "name": "Identidad, criptografía y protección",
+      "count": 22,
+      "description": "Cómo se protegen identidades, accesos y comunicaciones.",
+      "icon": "key",
+      "tag": "Protección"
+    },
+    {
+      "id": "cat-04",
+      "order": 4,
+      "name": "Operación, evidencia y continuidad",
+      "count": 24,
+      "description": "Detección, respuesta, recuperación y trazabilidad de incidentes.",
+      "icon": "activity",
+      "tag": "Operaciones"
+    },
+    {
+      "id": "cat-05",
+      "order": 5,
+      "name": "Ley, privacidad y ciclo de vida",
+      "count": 22,
+      "description": "Obligaciones, derechos y ciclo de vida de los datos personales.",
+      "icon": "scale",
+      "tag": "Privacidad"
+    },
+    {
+      "id": "cat-06",
+      "order": 6,
+      "name": "Riesgos, datos y decisiones",
+      "count": 20,
+      "description": "Métodos para analizar, evaluar y tratar riesgos.",
+      "icon": "chart",
+      "tag": "Riesgos"
+    },
+    {
+      "id": "cat-07",
+      "order": 7,
+      "name": "Ingeniería, datos y proveedores",
+      "count": 23,
+      "description": "Desarrollo seguro, infraestructura y tratamiento por terceros.",
+      "icon": "code",
+      "tag": "Tecnología"
+    },
+    {
+      "id": "cat-08",
+      "order": 8,
+      "name": "Biometría y tecnologías emergentes",
+      "count": 16,
+      "description": "Biometría, automatización y tecnologías de uso emergente.",
+      "icon": "fingerprint",
+      "tag": "Innovación"
+    },
+    {
+      "id": "cat-09",
+      "order": 9,
+      "name": "Ley de Ciberseguridad · Ecuador 2026",
+      "count": 33,
+      "description": "Definiciones legales, servicios esenciales, CSIRT, notificación, proveedores y gobernanza del ecosistema digital.",
+      "icon": "landmark",
+      "tag": "Normativa 2026"
+    }
+  ],
+  "terms": [
+    {
+      "id": "ciberseguridad",
+      "term": "Ciberseguridad",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Protección de sistemas, servicios y operaciones digitales frente a eventos dañinos.",
+      "example": "Evitar que el portal bancario sea tomado por un intruso.",
+      "reference": "NIST CSF 2.0 (marco técnico); LOPDP art. 37 (deber de seguridad). | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 2: concepto de ciberseguridad incorporado como objetivo de la transformación digital.",
+      "slide": 33,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "lopdp",
+        "nist"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "seguridad-de-la-informacion",
+      "term": "Seguridad de la información",
+      "category": "cat-01",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Protección de información en cualquier soporte, no solo informático.",
+      "example": "Guardar bajo llave contratos impresos y restringir acceso al sistema.",
+      "reference": "SPDP, Guía Riesgos v2, I.2 (integración con privacidad).",
+      "slide": 33,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "ciberespacio",
+      "term": "Ciberespacio",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Entorno donde interactúan redes, dispositivos, servicios digitales y usuarios.",
+      "example": "Usar correo, banca móvil y nube desde el teléfono.",
+      "reference": "NIST CSF 2.0 (marco técnico); SPDP, Guía Riesgos v2, II.2. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 4, literal i): definición incorporada al art. 5.i de la LOTDA.",
+      "slide": 34,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos",
+        "nist"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "activo-de-informacion",
+      "term": "Activo de información",
+      "category": "cat-01",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Elemento de valor que contiene, procesa o permite acceder a información.",
+      "example": "Base de datos de clientes y la cuenta administradora.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 (vulnerabilidad de activo); II.2.",
+      "slide": 34,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "activo-digital",
+      "term": "Activo digital",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Activo que existe o funciona en un entorno digital.",
+      "example": "Repositorio de expedientes y aplicación de reservas.",
+      "reference": "SPDP, Guía Riesgos v2, II.2 (contexto de riesgos); NIST CSF ID.AM. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 4, literal k): «activo digital o informático» incorporado al art. 5.k de la LOTDA.",
+      "slide": 35,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos",
+        "nist"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "confidencialidad",
+      "term": "Confidencialidad",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Propiedad por la cual información no llega a quien carece de autorización.",
+      "example": "Un vecino no debería recibir el examen médico de otra persona.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 y I.7.2. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-B, literal a): principio de confidencialidad en ciberseguridad.",
+      "slide": 35,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "integridad",
+      "term": "Integridad",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Propiedad de que la información no sea modificada sin autorización.",
+      "example": "No alterar una nota de crédito después de firmarla.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 y I.7.3. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-B, literal b): principio de integridad en ciberseguridad.",
+      "slide": 36,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "disponibilidad",
+      "term": "Disponibilidad",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Posibilidad de acceder a datos o servicios cuando se necesitan y corresponde.",
+      "example": "El médico consulta la historia clínica cuando atiende.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 y I.7.4. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-B, literal c): principio de disponibilidad en ciberseguridad.",
+      "slide": 36,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "triada-cia",
+      "term": "Tríada CIA",
+      "category": "cat-01",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Esquema de las tres propiedades: confidencialidad, integridad y disponibilidad.",
+      "example": "Clasificar si un archivo se filtró, se cambió o no se encuentra.",
+      "reference": "SPDP, Guía Riesgos v2, I.7.1–7.4.",
+      "slide": 37,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "autenticidad",
+      "term": "Autenticidad",
+      "category": "cat-01",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Certeza razonable sobre el origen o identidad alegada de una acción o mensaje.",
+      "example": "Comprobar por llamada que una orden sí proviene del gerente.",
+      "reference": "NIST CSF 2.0 PR.AA (referencia técnica); LOPDP art. 37. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 4, literal m): autenticidad como propiedad comprometida por un incidente de ciberseguridad.",
+      "slide": 37,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "lopdp",
+        "nist"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "resiliencia",
+      "term": "Resiliencia",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Capacidad para soportar y recuperarse de eventos negativos.",
+      "example": "Clínica con procedimiento alternativo cuando cae el sistema.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Resiliencia». | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 4, literal n) y art. 20-B, literal k): resiliencia digital y principio de resiliencia.",
+      "slide": 38,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "trazabilidad",
+      "term": "Trazabilidad",
+      "category": "cat-01",
+      "classification": "Explicación Técnica",
+      "definition": "Capacidad de reconstruir quién realizó qué acción y cuándo.",
+      "example": "Saber quién abrió el expediente y a qué hora.",
+      "reference": "SPDP, Guía desde Diseño §2.1.8 «Demostrar»; NIST CSF DE.CM.",
+      "slide": 38,
+      "sourceIds": [
+        "diseno",
+        "nist"
+      ]
+    },
+    {
+      "id": "amenaza",
+      "term": "Amenaza",
+      "category": "cat-01",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Posible causa de un evento dañino.",
+      "example": "Un estafador que busca robar claves bancarias.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Amenaza».",
+      "slide": 39,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "vulnerabilidad",
+      "term": "Vulnerabilidad",
+      "category": "cat-01",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Debilidad explotable de un activo, proceso o medida de seguridad.",
+      "example": "Dejar visible una clave pegada al monitor.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Vulnerabilidad». | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-L: evaluación, identificación y mitigación de vulnerabilidades técnicas.",
+      "slide": 39,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "riesgo-de-ciberseguridad",
+      "term": "Riesgo de ciberseguridad",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Posibilidad de consecuencias negativas debido a amenazas digitales.",
+      "example": "Perder datos de clientes por un enlace público no detectado.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Riesgo» y II.2. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 4, literal o): definición incorporada al art. 5.o de la LOTDA.",
+      "slide": 40,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "incidente-de-seguridad",
+      "term": "Incidente de seguridad",
+      "category": "cat-01",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Evento que afecta o amenaza las medidas de seguridad.",
+      "example": "Equipo comprometido por un archivo malicioso.",
+      "reference": "SPDP, Guía Riesgos v2, I.7; NIST CSF RS. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 4, literal m): definición específica de incidente de ciberseguridad; art. 20-G: notificación.",
+      "slide": 40,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos",
+        "nist"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "vulneracion-de-datos-personales",
+      "term": "Vulneración de datos personales",
+      "category": "cat-01",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Afectación de confidencialidad, integridad o disponibilidad de datos personales.",
+      "example": "Remitir diagnósticos de pacientes a un correo equivocado.",
+      "reference": "SPDP, Guía Riesgos v2, I.7.1–7.4; LOPDP art. 43. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-E: coordinación con la autoridad de protección de datos cuando las acciones inciden en datos personales.",
+      "slide": 41,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "lopdp",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "titular-de-datos",
+      "term": "Titular de datos",
+      "category": "cat-01",
+      "classification": "Definición Normativa",
+      "definition": "Persona física a quien pertenecen o se refieren los datos personales.",
+      "example": "Paciente del que se conserva un análisis de laboratorio.",
+      "reference": "LOPDP art. 4 «Titular».",
+      "slide": 41,
+      "sourceIds": [
+        "lopdp"
+      ]
+    },
+    {
+      "id": "actor-de-amenaza",
+      "term": "Actor de amenaza",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Persona, grupo u organización capaz de provocar un evento adverso.",
+      "example": "Estafador que llama fingiendo ser del banco.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (comunidades de amenaza).",
+      "slide": 43,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "comunidad-de-amenaza",
+      "term": "Comunidad de amenaza",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Grupo con características y capacidades semejantes para causar daños.",
+      "example": "Bandas que se dedican a extorsión digital.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Comunidades de amenaza».",
+      "slide": 43,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "perfilamiento-de-amenazas",
+      "term": "Perfilamiento de amenazas",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Análisis de cómo opera una amenaza, con qué medios y motivaciones.",
+      "example": "Reconocer que un fraude empieza con mensajes falsos.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 y II.2.2.",
+      "slide": 44,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "vector-de-ataque",
+      "term": "Vector de ataque",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Ruta o método que se utiliza para iniciar la intrusión.",
+      "example": "Enviar enlace engañoso por WhatsApp.",
+      "reference": "SPDP, Guía Riesgos v2, II.2 (escenarios y vectores).",
+      "slide": 44,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "ingenieria-social",
+      "term": "Ingeniería social",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Manipulación de personas para que revelen datos o hagan acciones no seguras.",
+      "example": "Falso soporte pide un código de acceso.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (ataques de ingeniería social).",
+      "slide": 45,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "phishing",
+      "term": "Phishing",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Mensaje fraudulento que aparenta ser legítimo para engañar al receptor.",
+      "example": "Correo de paquetería falso que pide iniciar sesión.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (phishing).",
+      "slide": 45,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "vishing",
+      "term": "Vishing",
+      "category": "cat-02",
+      "classification": "Explicación Técnica",
+      "definition": "Engaño mediante llamada de voz.",
+      "example": "Alguien llama diciendo ser ejecutivo de seguridad del banco.",
+      "reference": "NIST CSF 2.0 PR.AT (referencia técnica); Guía Riesgos v2 II.2.2 (ingeniería social).",
+      "slide": 46,
+      "sourceIds": [
+        "riesgos",
+        "nist"
+      ]
+    },
+    {
+      "id": "smishing",
+      "term": "Smishing",
+      "category": "cat-02",
+      "classification": "Explicación Técnica",
+      "definition": "Phishing realizado por mensajes SMS.",
+      "example": "SMS de una supuesta multa con enlace engañoso.",
+      "reference": "NIST CSF 2.0 PR.AT (referencia técnica); Guía Riesgos v2 II.2.2.",
+      "slide": 46,
+      "sourceIds": [
+        "riesgos",
+        "nist"
+      ]
+    },
+    {
+      "id": "malware",
+      "term": "Malware",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Software destinado a ejecutar acciones dañinas o no autorizadas.",
+      "example": "Aplicación falsa que roba contactos del celular.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (malware).",
+      "slide": 47,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "troyano",
+      "term": "Troyano",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Programa que se hace pasar por algo útil para facilitar acciones indebidas.",
+      "example": "Factura descargable que instala un programa malicioso.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (troyanos).",
+      "slide": 47,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "virus-informatico",
+      "term": "Virus informático",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Código malicioso capaz de propagarse insertándose en otros archivos.",
+      "example": "Un archivo infectado se copia entre equipos.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (virus).",
+      "slide": 48,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "ransomware",
+      "term": "Ransomware",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Software extorsivo que bloquea o cifra sistemas, a veces también roba datos.",
+      "example": "Historias clínicas inaccesibles con una nota de rescate.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (escenarios ransomware).",
+      "slide": 48,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "spyware",
+      "term": "Spyware",
+      "category": "cat-02",
+      "classification": "Explicación Técnica",
+      "definition": "Software que recopila información sin conocimiento autorizado del usuario.",
+      "example": "Aplicación espía registra mensajes de un teléfono.",
+      "reference": "NIST CSF 2.0 ID.RA y DE.CM (técnico); Guía Riesgos v2 II.2.2 (malware).",
+      "slide": 49,
+      "sourceIds": [
+        "riesgos",
+        "nist"
+      ]
+    },
+    {
+      "id": "rootkit",
+      "term": "Rootkit",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Herramienta maliciosa que oculta presencia o privilegios en el sistema.",
+      "example": "Programa que se esconde mientras observa el equipo.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (rootkits).",
+      "slide": 49,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "dos",
+      "term": "DoS",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Ataque que impide el uso normal de un sistema o servicio.",
+      "example": "Una web de turnos colapsa por peticiones artificiales.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (DoS).",
+      "slide": 50,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "ddos",
+      "term": "DDoS",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Ataque de denegación de servicio desde múltiples orígenes.",
+      "example": "Miles de equipos saturan el sitio de la clínica.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 y II.5 (DDoS).",
+      "slide": 50,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "mitm-intermediario",
+      "term": "MITM / intermediario",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Ataque en que un tercero se sitúa entre dos partes para espiar o alterar.",
+      "example": "Alguien intercepta una conversación en red insegura.",
+      "reference": "SPDP, Guía Riesgos v2, Abreviaciones «MITM»; II.2.2.",
+      "slide": 51,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "inyeccion-sql",
+      "term": "Inyección SQL",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Ataque a una aplicación que manipula instrucciones de consulta a una base de datos.",
+      "example": "Formulario permite ver fichas de otros usuarios por una falla.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (SQL Injection).",
+      "slide": 51,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "fuerza-bruta",
+      "term": "Fuerza bruta",
+      "category": "cat-02",
+      "classification": "Explicación Técnica",
+      "definition": "Intentar repetidamente claves hasta acertar.",
+      "example": "Probar miles de combinaciones de contraseña.",
+      "reference": "SPDP, Guía Riesgos v2 II.2.2 (crackeo de contraseñas); NIST SP 800-63B.",
+      "slide": 52,
+      "sourceIds": [
+        "riesgos",
+        "nist"
+      ]
+    },
+    {
+      "id": "exploit",
+      "term": "Exploit",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Técnica o código que aprovecha una vulnerabilidad.",
+      "example": "Usar la falla de una puerta electrónica para abrirla.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (desarrollo de exploits).",
+      "slide": 52,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "ataque-interno",
+      "term": "Ataque interno",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Acción dañina de alguien que ya tiene acceso legítimo a una organización.",
+      "example": "Empleado copia bases de clientes fuera de sus tareas.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 (ataques internos).",
+      "slide": 53,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "ciberextorsion",
+      "term": "Ciberextorsión",
+      "category": "cat-02",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Amenazar con revelar o bloquear información a cambio de dinero.",
+      "example": "Exigir pago para no publicar una base sustraída.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.2 y II.5 (extorsión/ransomware).",
+      "slide": 53,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "identificacion",
+      "term": "Identificación",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Declaración de quién es una persona o cuenta.",
+      "example": "Escribir usuario o número de cédula.",
+      "reference": "NIST SP 800-63 (identidad digital); LOPDP art. 37 (marco).",
+      "slide": 55,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "autenticacion",
+      "term": "Autenticación",
+      "category": "cat-03",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Proceso de comprobar una identidad declarada.",
+      "example": "Ingresar clave para abrir una cuenta.",
+      "reference": "SPDP, Guía desde Diseño §2.2 (autenticación robusta).",
+      "slide": 55,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "mfa-autenticacion-multifactor",
+      "term": "MFA / autenticación multifactor",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Verificar identidad mediante dos o más factores distintos.",
+      "example": "Clave y confirmación desde app en el celular.",
+      "reference": "NIST SP 800-63B (técnico); Guía desde Diseño §2.2 (autenticación robusta).",
+      "slide": 56,
+      "sourceIds": [
+        "diseno",
+        "nist"
+      ]
+    },
+    {
+      "id": "factor-de-conocimiento",
+      "term": "Factor de conocimiento",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Prueba basada en algo que una persona sabe.",
+      "example": "Contraseña o PIN.",
+      "reference": "NIST SP 800-63B (referencia técnica).",
+      "slide": 56,
+      "sourceIds": [
+        "nist"
+      ]
+    },
+    {
+      "id": "factor-de-posesion",
+      "term": "Factor de posesión",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Prueba basada en algo que una persona tiene.",
+      "example": "Dispositivo o llave física de seguridad.",
+      "reference": "NIST SP 800-63B (referencia técnica).",
+      "slide": 57,
+      "sourceIds": [
+        "nist"
+      ]
+    },
+    {
+      "id": "factor-biometrico",
+      "term": "Factor biométrico",
+      "category": "cat-03",
+      "classification": "Definición Normativa",
+      "definition": "Prueba basada en rasgo físico o conductual reconocido.",
+      "example": "Desbloquear el móvil con huella.",
+      "reference": "LOPDP art. 4; SPDP, Resol. 2026-0039-R, art. 4.",
+      "slide": 57,
+      "sourceIds": [
+        "lopdp",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "autorizacion",
+      "term": "Autorización",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Decisión sobre qué puede hacer alguien que ya está identificado.",
+      "example": "Recepcionista ve citas, pero no nóminas.",
+      "reference": "NIST CSF 2.0 PR.AA-05; LOPDP art. 37 (marco).",
+      "slide": 58,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "control-de-acceso",
+      "term": "Control de acceso",
+      "category": "cat-03",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Reglas y mecanismos que impiden accesos no permitidos.",
+      "example": "Solo personal médico accede al expediente de su paciente.",
+      "reference": "SPDP, Guía desde Diseño §2.1.2 «Restringir».",
+      "slide": 58,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "menor-privilegio",
+      "term": "Menor privilegio",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Asignar únicamente los permisos necesarios para la tarea.",
+      "example": "Pasante consulta agenda, sin poder descargarla toda.",
+      "reference": "NIST CSF 2.0 PR.AA-05; Guía desde Diseño §2.1.2.",
+      "slide": 59,
+      "sourceIds": [
+        "diseno",
+        "nist"
+      ]
+    },
+    {
+      "id": "credencial",
+      "term": "Credencial",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Elemento que una persona o sistema presenta para identificarse o autenticarse.",
+      "example": "Usuario, contraseña o token de acceso.",
+      "reference": "NIST SP 800-63B; SPDP, Guía desde Diseño §2.2.",
+      "slide": 59,
+      "sourceIds": [
+        "diseno",
+        "nist"
+      ]
+    },
+    {
+      "id": "privilegio-administrativo",
+      "term": "Privilegio administrativo",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Permiso especial para modificar configuraciones o usuarios.",
+      "example": "Responsable TI que puede crear nuevas cuentas.",
+      "reference": "NIST CSF 2.0 PR.AA; LOPDP art. 37 (marco).",
+      "slide": 60,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "cifrado-encriptacion",
+      "term": "Cifrado / encriptación",
+      "category": "cat-03",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Transformar información para que solo quien tiene la clave pueda leerla.",
+      "example": "Archivo de nómina protegido con clave criptográfica.",
+      "reference": "SPDP, Resol. 2025-0030-R, art. 3.9; Guía desde Diseño §2.1.2.",
+      "slide": 60,
+      "sourceIds": [
+        "diseno",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "clave-criptografica",
+      "term": "Clave criptográfica",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Dato secreto o protegido usado por un mecanismo de cifrado.",
+      "example": "La llave digital que permite abrir un archivo cifrado.",
+      "reference": "NIST SP 800-57 (técnico); Resol. 2025-0030-R art. 3.9 (contexto).",
+      "slide": 61,
+      "sourceIds": [
+        "resoluciones",
+        "nist"
+      ]
+    },
+    {
+      "id": "cifrado-en-transito",
+      "term": "Cifrado en tránsito",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Protección criptográfica mientras viajan datos entre sistemas.",
+      "example": "Consulta médica enviada por una conexión HTTPS.",
+      "reference": "NIST CSF 2.0 PR.DS; LOPDP art. 37 (marco).",
+      "slide": 61,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "cifrado-en-reposo",
+      "term": "Cifrado en reposo",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Protección criptográfica de información almacenada.",
+      "example": "Disco de laptop cifrado ante pérdida o robo.",
+      "reference": "NIST CSF 2.0 PR.DS; LOPDP art. 37 (marco).",
+      "slide": 62,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "hash-resumen-criptografico",
+      "term": "Hash / resumen criptográfico",
+      "category": "cat-03",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Huella matemática para comprobar la integridad de un contenido.",
+      "example": "Comparar la huella de un acta y saber si fue modificada.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (funciones hash en integridad).",
+      "slide": 62,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "salt-criptografica",
+      "term": "Salt criptográfica",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Valor adicional único utilizado con una contraseña antes de derivar su hash.",
+      "example": "Dos usuarios con igual clave tienen huellas almacenadas diferentes.",
+      "reference": "NIST SP 800-63B (técnico); LOPDP art. 37 (marco).",
+      "slide": 63,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "firma-digital",
+      "term": "Firma digital",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Mecanismo criptográfico para acreditar origen y detectar cambios.",
+      "example": "Firmar digitalmente un contrato con certificado válido.",
+      "reference": "NIST CSF 2.0 PR.DS (técnico); LOPDP art. 37 (marco).",
+      "slide": 63,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "certificado-digital",
+      "term": "Certificado digital",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Documento electrónico que asocia una identidad con una clave pública.",
+      "example": "El navegador verifica que entra al sitio genuino del banco.",
+      "reference": "NIST CSF 2.0 PR.DS (técnico); LOPDP art. 37.",
+      "slide": 64,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "https-tls",
+      "term": "HTTPS / TLS",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Protocolo que protege comunicaciones entre navegador y servidor.",
+      "example": "El candado de la conexión al portal de citas.",
+      "reference": "NIST CSF 2.0 PR.DS (técnico); LOPDP art. 37.",
+      "slide": 64,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "token-de-sesion",
+      "term": "Token de sesión",
+      "category": "cat-03",
+      "classification": "Explicación Técnica",
+      "definition": "Identificador temporal que permite continuar una sesión autenticada.",
+      "example": "Permanecer dentro del portal sin escribir la clave cada clic.",
+      "reference": "SPDP, Guía desde Diseño §2.2 (seguridad aplicaciones); OWASP ASVS.",
+      "slide": 65,
+      "sourceIds": [
+        "diseno",
+        "owasp"
+      ]
+    },
+    {
+      "id": "seguridad-de-cero-confianza-zero-trust",
+      "term": "Seguridad de cero confianza / Zero Trust",
+      "category": "cat-03",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "No asumir confianza automática: verificar cada acceso según contexto.",
+      "example": "Revisar también permisos de equipos dentro de la oficina.",
+      "reference": "SPDP, Guía desde Diseño, cap. 2 «Zero Trust».",
+      "slide": 65,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "log-bitacora",
+      "term": "Log / bitácora",
+      "category": "cat-04",
+      "classification": "Explicación Técnica",
+      "definition": "Registro cronológico de eventos en un sistema.",
+      "example": "Lista de quién entró al expediente y a qué hora.",
+      "reference": "SPDP, Guía desde Diseño §2.2 (monitoreo); NIST CSF DE.CM.",
+      "slide": 67,
+      "sourceIds": [
+        "diseno",
+        "nist"
+      ]
+    },
+    {
+      "id": "monitoreo-continuo",
+      "term": "Monitoreo continuo",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Observación recurrente para identificar anomalías o fallas.",
+      "example": "Recibir alerta al descargar miles de archivos.",
+      "reference": "SPDP, Guía desde Diseño §2.2.4.",
+      "slide": 67,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "alerta-de-seguridad",
+      "term": "Alerta de seguridad",
+      "category": "cat-04",
+      "classification": "Explicación Técnica",
+      "definition": "Señal emitida al detectar un evento sospechoso o condición anormal.",
+      "example": "Notificación de acceso desde otro país.",
+      "reference": "NIST CSF 2.0 DE.CM; SPDP, Guía Riesgos v2, I.6.",
+      "slide": 68,
+      "sourceIds": [
+        "riesgos",
+        "nist"
+      ]
+    },
+    {
+      "id": "soc",
+      "term": "SOC",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Equipo o centro que monitorea, detecta e investiga eventos de seguridad.",
+      "example": "Personal que revisa accesos anómalos durante la noche.",
+      "reference": "SPDP, Guía Riesgos v2, Abreviaciones «SOC».",
+      "slide": 68,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "csirt",
+      "term": "CSIRT",
+      "category": "cat-04",
+      "classification": "Definición Normativa",
+      "definition": "Equipo especializado en coordinar respuesta a incidentes de seguridad informática.",
+      "example": "Grupo que activa contención y coordina restauración tras ataque.",
+      "reference": "NIST SP 800-61r2 (técnico); LOPDP arts. 43–47 (contexto). | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 4, literal l): CSIRT definido en el art. 5.l de la LOTDA; art. 20-H: CSIRT Nacional.",
+      "slide": 69,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "lopdp",
+        "nist"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "siem",
+      "term": "SIEM",
+      "category": "cat-04",
+      "classification": "Explicación Técnica",
+      "definition": "Plataforma que centraliza y correlaciona registros de seguridad.",
+      "example": "Relacionar accesos extraños desde diversos equipos.",
+      "reference": "NIST CSF 2.0 DE.AE/DE.CM (técnico); LOPDP art. 37.",
+      "slide": 69,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "edr",
+      "term": "EDR",
+      "category": "cat-04",
+      "classification": "Explicación Técnica",
+      "definition": "Herramienta para detectar y responder a amenazas en computadoras.",
+      "example": "Bloquear programa malicioso que se ejecuta en laptop.",
+      "reference": "NIST CSF 2.0 DE.CM/RS.MI (técnico); LOPDP art. 37.",
+      "slide": 70,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "antivirus-antimalware",
+      "term": "Antivirus / antimalware",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Herramienta para detectar y bloquear software malicioso.",
+      "example": "Evitar instalación de archivo peligroso.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (antivirus).",
+      "slide": 70,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "cortafuegos-firewall",
+      "term": "Cortafuegos / firewall",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Reglas que permiten o bloquean comunicaciones en una red.",
+      "example": "Impedir conexiones desde direcciones no autorizadas.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (cortafuegos).",
+      "slide": 71,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "waf",
+      "term": "WAF",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Cortafuegos especializado que ayuda a proteger aplicaciones web.",
+      "example": "Detener petición anómala a portal de trámites.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (WAF).",
+      "slide": 71,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "vulnerabilidad-tecnica",
+      "term": "Vulnerabilidad técnica",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Falla de software o equipo que requiere evaluación especializada.",
+      "example": "Servidor con versión vulnerable de un componente.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Vulnerabilidades técnicas».",
+      "slide": 72,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "parche-de-seguridad",
+      "term": "Parche de seguridad",
+      "category": "cat-04",
+      "classification": "Explicación Técnica",
+      "definition": "Actualización de software destinada a corregir una debilidad.",
+      "example": "Instalar actualización que cierra una falla de Windows.",
+      "reference": "NIST CSF 2.0 PR.PS (técnico); LOPDP art. 37.",
+      "slide": 72,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "gestion-de-vulnerabilidades",
+      "term": "Gestión de vulnerabilidades",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Proceso para detectar, priorizar y corregir debilidades.",
+      "example": "Revisar equipos cada mes y corregir fallas críticas.",
+      "reference": "SPDP, Guía Riesgos v2, II.2.3 y II.5.",
+      "slide": 73,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "escaneo-de-vulnerabilidades",
+      "term": "Escaneo de vulnerabilidades",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Revisión automatizada para detectar posibles debilidades.",
+      "example": "Herramienta reporta un servidor desactualizado.",
+      "reference": "SPDP, Anexo Programa DPD, Bloque 3.2.b.",
+      "slide": 73,
+      "sourceIds": [
+        "programa"
+      ]
+    },
+    {
+      "id": "prueba-de-penetracion-pentest",
+      "term": "Prueba de penetración / pentest",
+      "category": "cat-04",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Evaluación controlada que intenta demostrar si una falla puede explotarse.",
+      "example": "Especialista prueba si un usuario entra a registros ajenos.",
+      "reference": "SPDP, Guía Riesgos v2, Abreviaciones «Pen testing». | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-L: pruebas controladas de seguridad con autorización escrita y condiciones aplicables.",
+      "slide": 74,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "cve",
+      "term": "CVE",
+      "category": "cat-04",
+      "classification": "Explicación Técnica",
+      "definition": "Identificador público asignado a una vulnerabilidad conocida.",
+      "example": "Código que permite reconocer una falla en un programa.",
+      "reference": "NIST NVD (referencia técnica); LOPDP art. 37 (marco).",
+      "slide": 74,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "backup-copia-de-seguridad",
+      "term": "Backup / copia de seguridad",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Copia independiente de información necesaria para recuperarla.",
+      "example": "Copia diaria de historias clínicas en otro lugar.",
+      "reference": "SPDP, Guía desde Diseño §2.1.1 (backups); Guía Riesgos v2, II.5.",
+      "slide": 75,
+      "sourceIds": [
+        "riesgos",
+        "diseno"
+      ]
+    },
+    {
+      "id": "restauracion",
+      "term": "Restauración",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Proceso de recuperar datos o sistemas desde una copia u otra fuente.",
+      "example": "Volver a abrir registros tras falla del servidor.",
+      "reference": "SPDP, Guía Riesgos v2, I.7.4 y II.5.",
+      "slide": 75,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "rpo",
+      "term": "RPO",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Máxima pérdida de datos en tiempo que se está dispuesto a tolerar.",
+      "example": "Aceptar como máximo una hora de registros perdidos.",
+      "reference": "SPDP, Guía Riesgos v2, Abreviaciones «RPO».",
+      "slide": 76,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "rto",
+      "term": "RTO",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Tiempo objetivo para restablecer un sistema tras interrupción.",
+      "example": "Recuperar servicio de citas en dos horas.",
+      "reference": "SPDP, Guía Riesgos v2, Abreviaciones «RTO».",
+      "slide": 76,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "continuidad-de-negocio",
+      "term": "Continuidad de negocio",
+      "category": "cat-04",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Planificación para seguir atendiendo servicios críticos ante disrupciones.",
+      "example": "Atender por formularios controlados mientras falla el sistema.",
+      "reference": "SPDP, Anexo Programa DPD, Bloque 3.6.g. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-LL: planes de continuidad operativa para infraestructura crítica digital.",
+      "slide": 77,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "programa"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "plan-de-respuesta-a-incidentes",
+      "term": "Plan de respuesta a incidentes",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Procedimiento con roles y acciones para detectar, contener y recuperar.",
+      "example": "Guía interna para actuar ante fuga de nómina.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (escenarios y respuesta).",
+      "slide": 77,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "analisis-forense-digital",
+      "term": "Análisis forense digital",
+      "category": "cat-04",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Preservación y estudio técnico de rastros de un evento.",
+      "example": "Revisar evidencia de qué cuenta descargó los archivos.",
+      "reference": "SPDP, Guía Riesgos v2, II.5 (escenarios: forense).",
+      "slide": 78,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "cadena-de-custodia",
+      "term": "Cadena de custodia",
+      "category": "cat-04",
+      "classification": "Explicación Técnica",
+      "definition": "Registro de cómo se recogió, resguardó y trasladó la evidencia.",
+      "example": "Documentar quién copió y guardó un archivo de registro.",
+      "reference": "NIST SP 800-86 (técnico); LOPDP art. 37 (marco).",
+      "slide": 78,
+      "sourceIds": [
+        "lopdp",
+        "nist"
+      ]
+    },
+    {
+      "id": "dato-personal",
+      "term": "Dato personal",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Dato que identifica o permite identificar a una persona natural.",
+      "example": "Nombre asociado al número de celular.",
+      "reference": "LOPDP, art. 4 «Dato personal».",
+      "slide": 80,
+      "sourceIds": [
+        "lopdp"
+      ]
+    },
+    {
+      "id": "dato-sensible",
+      "term": "Dato sensible",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Dato cuya utilización indebida puede vulnerar gravemente derechos o discriminar.",
+      "example": "Diagnóstico de salud o dato biométrico.",
+      "reference": "LOPDP, art. 4 «Datos sensibles».",
+      "slide": 80,
+      "sourceIds": [
+        "lopdp"
+      ]
+    },
+    {
+      "id": "dato-biometrico",
+      "term": "Dato biométrico",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Dato de rasgos físicos, fisiológicos o conductuales que identifica de forma única.",
+      "example": "Huella o imagen facial usada para identificación.",
+      "reference": "LOPDP art. 4; Resol. 2026-0039-R, arts. 3–4.",
+      "slide": 81,
+      "sourceIds": [
+        "lopdp",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "tratamiento-de-datos",
+      "term": "Tratamiento de datos",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Operación realizada sobre datos: recolectar, guardar, consultar, compartir o eliminar.",
+      "example": "Registrar datos de clientes en un formulario.",
+      "reference": "LOPDP, art. 4 «Tratamiento».",
+      "slide": 81,
+      "sourceIds": [
+        "lopdp"
+      ]
+    },
+    {
+      "id": "responsable-del-tratamiento",
+      "term": "Responsable del tratamiento",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Quien decide finalidades y medios del tratamiento.",
+      "example": "Hospital que define la gestión de sus expedientes.",
+      "reference": "LOPDP, art. 4 «Responsable».",
+      "slide": 82,
+      "sourceIds": [
+        "lopdp"
+      ]
+    },
+    {
+      "id": "encargado-del-tratamiento",
+      "term": "Encargado del tratamiento",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Quien trata datos personales por cuenta del responsable.",
+      "example": "Proveedor que hospeda los archivos del hospital por contrato.",
+      "reference": "LOPDP, art. 4 «Encargado».",
+      "slide": 82,
+      "sourceIds": [
+        "lopdp"
+      ]
+    },
+    {
+      "id": "dpd",
+      "term": "DPD",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Delegado que asesora, supervisa y coopera con la autoridad en materia de datos.",
+      "example": "Profesional que verifica gestión y notificación de brechas.",
+      "reference": "LOPDP, arts. 4 y 49; Resol. 2025-0028-R.",
+      "slide": 83,
+      "sourceIds": [
+        "lopdp",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "rat",
+      "term": "RAT",
+      "category": "cat-05",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Registro documentado de actividades de tratamiento que realiza una entidad.",
+      "example": "Inventario de procesos que manejan datos de postulantes.",
+      "reference": "SPDP, Guía desde Diseño, §0 abreviaciones «RAT»; LOPDP obligaciones de registro.",
+      "slide": 83,
+      "sourceIds": [
+        "lopdp",
+        "diseno"
+      ]
+    },
+    {
+      "id": "privacidad-desde-el-diseno",
+      "term": "Privacidad desde el diseño",
+      "category": "cat-05",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Integrar protección desde la concepción y diseño de procesos o sistemas.",
+      "example": "Configurar desde el inicio campos mínimos de un formulario.",
+      "reference": "LOPDP, art. 39; SPDP, Guía desde Diseño §1.1. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-B, literal j): seguridad y privacidad desde el diseño y por defecto.",
+      "slide": 84,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "lopdp",
+        "diseno"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "proteccion-por-defecto",
+      "term": "Protección por defecto",
+      "category": "cat-05",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Configurar inicialmente las opciones que menos datos exponen o recogen.",
+      "example": "Perfil privado en vez de público al crear una cuenta.",
+      "reference": "LOPDP, art. 39; SPDP, Guía desde Diseño §1.2. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-B, literal j): seguridad y privacidad desde el diseño y por defecto.",
+      "slide": 84,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "lopdp",
+        "diseno"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "minimizacion",
+      "term": "Minimización",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Recoger y utilizar solo datos realmente necesarios para una finalidad.",
+      "example": "No pedir estado civil para enviar una factura.",
+      "reference": "LOPDP, art. 10; Guía desde Diseño §2.1.1.",
+      "slide": 85,
+      "sourceIds": [
+        "lopdp",
+        "diseno"
+      ]
+    },
+    {
+      "id": "pet-tecnologias-de-mejora-de-privacidad",
+      "term": "PET / tecnologías de mejora de privacidad",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Herramientas que reducen exposición o identificabilidad de datos.",
+      "example": "Mostrar edades por rangos en lugar de fecha de nacimiento.",
+      "reference": "SPDP, Resol. 2025-0030-R, art. 3.9; Guía desde Diseño §0.",
+      "slide": 85,
+      "sourceIds": [
+        "diseno",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "seudonimizacion",
+      "term": "Seudonimización",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Sustituir identificadores por seudónimos con información de reversión separada.",
+      "example": "Usar «Paciente 025» y resguardar tabla de equivalencias.",
+      "reference": "SPDP, Resol. 2025-0030-R, arts. 3.6 y 5.",
+      "slide": 86,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "anonimizacion",
+      "term": "Anonimización",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Aplicar técnicas para impedir razonablemente identificar o reidentificar una persona.",
+      "example": "Encuesta publicada en cifras agregadas sin identificadores.",
+      "reference": "SPDP, Resol. 2025-0030-R, arts. 3.1 y 8.",
+      "slide": 86,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "reidentificacion",
+      "term": "Reidentificación",
+      "category": "cat-05",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Vincular datos tratados con la identidad real de una persona.",
+      "example": "Relacionar código de paciente con su nombre usando una tabla.",
+      "reference": "SPDP, Resol. 2025-0030-R, arts. 5–8.",
+      "slide": 87,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "enmascaramiento-data-masking",
+      "term": "Enmascaramiento / data masking",
+      "category": "cat-05",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Ocultar parte del dato para que no aparezca completo al consultar.",
+      "example": "Visualizar ****1234 en lugar del número entero.",
+      "reference": "SPDP, Guía desde Diseño §2.1.2 «Ofuscar».",
+      "slide": 87,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "ofuscacion",
+      "term": "Ofuscación",
+      "category": "cat-05",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Hacer menos legible o directamente identificable un dato mediante técnicas.",
+      "example": "Ocultar nombres al mostrar una captura de sistema.",
+      "reference": "SPDP, Guía desde Diseño §2.1.2 «Ofuscar».",
+      "slide": 88,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "bloqueo-de-datos",
+      "term": "Bloqueo de datos",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Inhabilitar acceso o tratamiento según supuestos aplicables.",
+      "example": "Conservar registro para obligación legal sin permitir uso habitual.",
+      "reference": "SPDP, Resol. 2025-0030-R, arts. 3.2 y 13.",
+      "slide": 88,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "suspension-del-tratamiento",
+      "term": "Suspensión del tratamiento",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Restricción temporal de nuevas operaciones sobre datos sin necesariamente eliminarlos.",
+      "example": "Pausar uso de registros mientras se resuelve una solicitud.",
+      "reference": "SPDP, Resol. 2025-0030-R, arts. 3.8 y 15–18.",
+      "slide": 89,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "eliminacion-de-datos",
+      "term": "Eliminación de datos",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Supresión definitiva que impide acceso y recuperación en los términos normativos.",
+      "example": "Eliminar ficha al agotarse finalidad y sin obligación de conservarla.",
+      "reference": "SPDP, Resol. 2025-0030-R, arts. 3.3 y 19–24.",
+      "slide": 89,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "portabilidad",
+      "term": "Portabilidad",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Derecho de recibir ciertos datos en formato interoperable y transferible.",
+      "example": "Solicitar exportación de datos a otra plataforma.",
+      "reference": "LOPDP, derechos de titulares; Resol. 2025-0030-R, art. 22.",
+      "slide": 90,
+      "sourceIds": [
+        "lopdp",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "evaluacion-de-impacto-eipd",
+      "term": "Evaluación de impacto / EIPD",
+      "category": "cat-05",
+      "classification": "Definición Normativa",
+      "definition": "Análisis preventivo de riesgos del tratamiento para derechos y libertades.",
+      "example": "Analizar consecuencias antes de implantar reconocimiento facial.",
+      "reference": "LOPDP, art. 42; RGLOPDP arts. 29–32.",
+      "slide": 90,
+      "sourceIds": [
+        "lopdp",
+        "reglamento"
+      ]
+    },
+    {
+      "id": "analisis-de-riesgos",
+      "term": "Análisis de riesgos",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Estimar probabilidad, frecuencia y magnitud de consecuencias negativas.",
+      "example": "Valorar posibilidad e impacto de pérdida de fichas clínicas.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Análisis de riesgos».",
+      "slide": 92,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "gestion-de-riesgos",
+      "term": "Gestión de riesgos",
+      "category": "cat-06",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Identificar, analizar y tratar escenarios para proteger derechos.",
+      "example": "Priorizar recursos para asegurar nómina y expedientes.",
+      "reference": "SPDP, Guía Riesgos v2, I.0, I.1 y II. | Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), Art. 20-I, literal a), numeral 1: evaluación y gestión de riesgos del PSD.",
+      "slide": 92,
+      "sourceIds": [
+        "ley-ciber-2026",
+        "riesgos"
+      ],
+      "updatedInLaw2026": true
+    },
+    {
+      "id": "riesgo-inherente",
+      "term": "Riesgo inherente",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Riesgo evaluado antes de aplicar nuevas medidas de seguridad.",
+      "example": "Exposición de carpeta sin controles adicionales.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Riesgo inherente».",
+      "slide": 93,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "riesgo-residual",
+      "term": "Riesgo residual",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Riesgo que permanece después de implantar controles.",
+      "example": "Aún existe riesgo tras habilitar MFA y registro de accesos.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Riesgo residual».",
+      "slide": 93,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "impacto",
+      "term": "Impacto",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Consecuencia de un evento sobre derechos y libertades de titulares.",
+      "example": "Exposición de diagnóstico que provoca discriminación.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Impacto».",
+      "slide": 94,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "impacto-primario",
+      "term": "Impacto primario",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Daño o consecuencia directa que experimenta el titular.",
+      "example": "Usan datos filtrados para acceder a su cuenta.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Impactos primarios».",
+      "slide": 94,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "impacto-secundario",
+      "term": "Impacto secundario",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Daño al titular que resulta de acciones o reacciones de otros.",
+      "example": "Se niega servicio al conocer dato de salud divulgado.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Impactos secundarios».",
+      "slide": 95,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "probabilidad-de-ocurrencia",
+      "term": "Probabilidad de ocurrencia",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Estimación de la posibilidad de que suceda un evento en un periodo.",
+      "example": "Probabilidad de acceso indebido durante un año.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Probabilidad».",
+      "slide": 95,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "frecuencia-de-ocurrencia",
+      "term": "Frecuencia de ocurrencia",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Cantidad de eventos esperados durante determinado tiempo.",
+      "example": "Cuántas filtraciones podrían ocurrir en un trimestre.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Frecuencia».",
+      "slide": 96,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "calibracion-de-riesgos",
+      "term": "Calibración de riesgos",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Mejorar las estimaciones usando datos y criterios verificables.",
+      "example": "Comparar predicción de incidentes con incidentes observados.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Calibración del riesgo».",
+      "slide": 96,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "rationale",
+      "term": "Rationale",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Justificación explícita de métricas, supuestos y decisiones de riesgo.",
+      "example": "Explicar por qué se clasificó un evento como alto riesgo.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 e I.4.",
+      "slide": 97,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "sesgo",
+      "term": "Sesgo",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Distorsión sistemática en un juicio o estimación.",
+      "example": "Suponer que jamás habrá ataque porque aún no ocurrió.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Sesgo».",
+      "slide": 97,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "ruido",
+      "term": "Ruido",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Variación inconsistente que empeora la calidad de las estimaciones.",
+      "example": "Dos analistas asignan valores distintos al mismo caso sin criterio.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Ruido».",
+      "slide": 98,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "analisis-cualitativo",
+      "term": "Análisis cualitativo",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Valoración con categorías y razonamientos documentados.",
+      "example": "Estimar riesgo bajo/medio/alto con criterios definidos.",
+      "reference": "SPDP, Guía Riesgos v2, II.3.6–3.9.",
+      "slide": 98,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "analisis-cuantitativo",
+      "term": "Análisis cuantitativo",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Uso de valores numéricos para medir frecuencia e impactos.",
+      "example": "Estimar frecuencia anual y costo probable de una caída.",
+      "reference": "SPDP, Guía Riesgos v2, II.3.2–3.5.",
+      "slide": 99,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "modelo-fair",
+      "term": "Modelo FAIR",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Modelo para analizar factores y consecuencias de riesgo informático.",
+      "example": "Separar frecuencia probable y magnitud de pérdidas.",
+      "reference": "SPDP, Guía Riesgos v2, I.3 y II.3 (FAIR).",
+      "slide": 99,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "monte-carlo",
+      "term": "Monte Carlo",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Simular muchos escenarios para estimar distribuciones de resultados.",
+      "example": "Ensayar miles de combinaciones de pérdidas posibles.",
+      "reference": "SPDP, Guía Riesgos v2, II.3 (simulación Monte Carlo).",
+      "slide": 100,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "rosi",
+      "term": "ROSI",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Medida que compara beneficios esperados de seguridad frente al costo invertido.",
+      "example": "Evaluar si proteger respaldos compensa frente a pérdidas.",
+      "reference": "SPDP, Guía Riesgos v2, II.5.3 (ROSI).",
+      "slide": 100,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "vulnerabilidad-juridica",
+      "term": "Vulnerabilidad jurídica",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Debilidad de cumplimiento legal que puede aumentar el daño a titulares.",
+      "example": "No contar con mecanismo para atender solicitudes.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Vulnerabilidades jurídicas».",
+      "slide": 101,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "vulnerabilidad-organizacional",
+      "term": "Vulnerabilidad organizacional",
+      "category": "cat-06",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Deficiencia de políticas, procesos o responsabilidades.",
+      "example": "No definir quién revoca accesos tras salida de empleados.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Vulnerabilidades organizacionales».",
+      "slide": 101,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "devops",
+      "term": "DevOps",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Prácticas de colaboración entre desarrollo y operación de software.",
+      "example": "Equipo publica nueva versión con pruebas automatizadas.",
+      "reference": "SPDP, Guía desde Diseño §0 abreviaciones «DevOps».",
+      "slide": 103,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "devsecops",
+      "term": "DevSecOps",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Integrar controles de seguridad en construcción y operación de sistemas.",
+      "example": "Aplicación se analiza antes de entregarla a usuarios.",
+      "reference": "SPDP, Guía desde Diseño §2.2.",
+      "slide": 103,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "devprivops",
+      "term": "DevPrivOps",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Integrar protección de datos en prácticas y procesos de desarrollo.",
+      "example": "Diseñar formulario que pide solo datos necesarios.",
+      "reference": "SPDP, Guía desde Diseño §2.1.",
+      "slide": 104,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "devriskops",
+      "term": "DevRiskOps",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Incorporar decisiones y controles de riesgo al ciclo de ingeniería.",
+      "example": "Evaluar riesgos de publicar un nuevo servicio.",
+      "reference": "SPDP, Guía desde Diseño §2.3.",
+      "slide": 104,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "shift-left",
+      "term": "Shift Left",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Evaluar seguridad desde etapas tempranas del desarrollo.",
+      "example": "Detectar error de permisos antes de publicar la aplicación.",
+      "reference": "SPDP, Guía desde Diseño §2.2.1.",
+      "slide": 105,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "sast",
+      "term": "SAST",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Análisis de seguridad del código sin ejecutar la aplicación.",
+      "example": "Buscar en el código una contraseña escrita a mano.",
+      "reference": "SPDP, Guía desde Diseño §0 abreviaciones «SAST».",
+      "slide": 105,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "dast",
+      "term": "DAST",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Pruebas dinámicas para detectar debilidades en la aplicación en funcionamiento.",
+      "example": "Probar un formulario de web de trámites.",
+      "reference": "SPDP, Guía desde Diseño §0 abreviaciones «DAST».",
+      "slide": 106,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "sca",
+      "term": "SCA",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Análisis de componentes y dependencias usados por el software.",
+      "example": "Encontrar librería antigua con falla conocida.",
+      "reference": "SPDP, Guía desde Diseño §0 abreviaciones «SCA».",
+      "slide": 106,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "iac-infraestructura-como-codigo",
+      "term": "IaC / infraestructura como código",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Definir infraestructura en archivos que también pueden revisarse.",
+      "example": "Crear servidor cloud mediante configuración versionada.",
+      "reference": "SPDP, Guía desde Diseño §0 abreviaciones «IaC».",
+      "slide": 107,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "pipeline-ci-cd",
+      "term": "Pipeline CI/CD",
+      "category": "cat-07",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Flujo automatizado que prueba, valida y despliega cambios de software.",
+      "example": "No publicar versión si falla un control de seguridad.",
+      "reference": "SPDP, Guía desde Diseño §0 abreviaciones «CI/CD».",
+      "slide": 107,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "api",
+      "term": "API",
+      "category": "cat-07",
+      "classification": "Explicación Técnica",
+      "definition": "Interfaz para que dos aplicaciones intercambien funciones o datos.",
+      "example": "App del médico consulta turnos del portal hospitalario.",
+      "reference": "SPDP, Guía desde Diseño §2.2 (aplicaciones y servicios).",
+      "slide": 108,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "nube-cloud",
+      "term": "Nube / cloud",
+      "category": "cat-07",
+      "classification": "Explicación Técnica",
+      "definition": "Recursos de almacenamiento o cómputo prestados a distancia por proveedor.",
+      "example": "Guardar expedientes en servicio alojado externamente.",
+      "reference": "SPDP, Guía Riesgos v2, II.2 (escenarios de sistemas); LOPDP art. 37.",
+      "slide": 108,
+      "sourceIds": [
+        "lopdp",
+        "riesgos"
+      ]
+    },
+    {
+      "id": "transferencia-de-datos",
+      "term": "Transferencia de datos",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Envío o puesta a disposición de datos a otro destinatario según normativa.",
+      "example": "Empresa envía datos de clientes a aseguradora.",
+      "reference": "LOPDP art. 4; Resol. 2026-0004-R, arts. 3–10.",
+      "slide": 109,
+      "sourceIds": [
+        "lopdp",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "flujo-transfronterizo",
+      "term": "Flujo transfronterizo",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Movimiento de datos personales a través de fronteras jurisdiccionales.",
+      "example": "Información alojada o enviada a un destinatario extranjero.",
+      "reference": "SPDP, Resol. 2026-0004-R, art. 3.",
+      "slide": 109,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "garantias-adecuadas",
+      "term": "Garantías adecuadas",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Mecanismos que ofrecen protección exigible en transferencias aplicables.",
+      "example": "Contrato tipo y medidas adecuadas con destinatario extranjero.",
+      "reference": "SPDP, Resol. 2026-0004-R, arts. 20–21.",
+      "slide": 110,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "clausulas-contractuales-modelo",
+      "term": "Cláusulas contractuales modelo",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Textos contractuales tipo para acordar garantías en ciertos flujos de datos.",
+      "example": "Anexo que obliga al receptor extranjero a proteger datos.",
+      "reference": "SPDP, Resol. 2026-0004-R, arts. 23–27.",
+      "slide": 110,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "normas-corporativas-vinculantes",
+      "term": "Normas corporativas vinculantes",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Reglas obligatorias dentro de grupo empresarial para transferencias.",
+      "example": "Filiales usan compromisos comunes de privacidad.",
+      "reference": "SPDP, Resol. 2026-0004-R, arts. 28–30.",
+      "slide": 111,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "gran-escala",
+      "term": "Gran escala",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Tratamiento evaluado por titulares, variedad, duración y alcance geográfico.",
+      "example": "Gestión masiva de pacientes de red hospitalaria.",
+      "reference": "RGLOPDP art. 4.7; Resol. 2026-0005-R, arts. 3, 7–14.",
+      "slide": 111,
+      "sourceIds": [
+        "lopdp",
+        "reglamento",
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "numero-de-titulares",
+      "term": "Número de titulares",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Cantidad de personas únicas involucradas durante referencia temporal.",
+      "example": "Contar personas, no veces que visitaron portal.",
+      "reference": "SPDP, Resol. 2026-0005-R, art. 3.8.",
+      "slide": 112,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "volumen-de-datos",
+      "term": "Volumen de datos",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Cantidad global de datos personales tratados, considerando titulares y datos por uno.",
+      "example": "Cada cliente tiene dirección, teléfono y tres productos.",
+      "reference": "SPDP, Resol. 2026-0005-R, art. 3.13.",
+      "slide": 112,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "alcance-geografico",
+      "term": "Alcance geográfico",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Extensión territorial de dónde están titulares y operaciones.",
+      "example": "Actividad en una ciudad frente a actividad internacional.",
+      "reference": "SPDP, Resol. 2026-0005-R, art. 3.1–3.5.",
+      "slide": 113,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "permanencia-del-tratamiento",
+      "term": "Permanencia del tratamiento",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Tiempo durante el cual se procesan activamente los datos.",
+      "example": "Programa temporal de inscripciones durante seis meses.",
+      "reference": "SPDP, Resol. 2026-0005-R, art. 3.9–3.12.",
+      "slide": 113,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "frecuencia-del-tratamiento",
+      "term": "Frecuencia del tratamiento",
+      "category": "cat-07",
+      "classification": "Definición Normativa",
+      "definition": "Regularidad con que se realizan operaciones sobre los datos.",
+      "example": "Revisión diaria frente a registro anual.",
+      "reference": "SPDP, Resol. 2026-0005-R, art. 3.7.",
+      "slide": 114,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "dato-biometrico-bruto",
+      "term": "Dato biométrico bruto",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Información capturada directamente del rasgo biométrico.",
+      "example": "Fotografía facial original usada para verificación.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.2.",
+      "slide": 116,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "plantilla-biometrica",
+      "term": "Plantilla biométrica",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Representación matemática derivada de rasgo biométrico para comparar.",
+      "example": "Patrón derivado de la huella para verificar acceso.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.8.",
+      "slide": 116,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "identificacion-biometrica",
+      "term": "Identificación biométrica",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Comparar muestra contra muchos registros para averiguar identidad.",
+      "example": "Cámara identifica a una persona entre cientos de rostros.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.5.",
+      "slide": 117,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "verificacion-biometrica",
+      "term": "Verificación biométrica",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Comparar muestra con plantilla de identidad declarada.",
+      "example": "Empleado pone dedo para validar su propia cuenta.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.10.",
+      "slide": 117,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "sistema-biometrico",
+      "term": "Sistema biométrico",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Tecnología y procesos que capturan y comparan características personales.",
+      "example": "Reloj biométrico con sensor de huella.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.9.",
+      "slide": 118,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "identificacion-univoca",
+      "term": "Identificación unívoca",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Atribuir de manera única una identidad mediante rasgos biométricos.",
+      "example": "Distinguir a una persona entre personas con nombre similar.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.6.",
+      "slide": 118,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "asimetria-significativa",
+      "term": "Asimetría significativa",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Desequilibrio de poder que puede comprometer consentimiento libre.",
+      "example": "Trabajador cree que no puede negarse a uso de huella.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.1.",
+      "slide": 119,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "imposibilidad-tecnica",
+      "term": "Imposibilidad técnica",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Demostrar que alternativas no biométricas no cumplen la finalidad igual.",
+      "example": "Evaluar tarjeta o PIN antes de imponer reconocimiento facial.",
+      "reference": "SPDP, Resol. 2026-0039-R, art. 4.7.",
+      "slide": 119,
+      "sourceIds": [
+        "resoluciones"
+      ]
+    },
+    {
+      "id": "perfilamiento-automatizado",
+      "term": "Perfilamiento automatizado",
+      "category": "cat-08",
+      "classification": "Definición Normativa",
+      "definition": "Analizar datos para elaborar perfiles o predicciones sobre personas.",
+      "example": "Sistema clasifica patrones de consumo para ofrecer créditos.",
+      "reference": "LOPDP, arts. 4 y 42; SPDP, Guía Riesgos v2, II.4.",
+      "slide": 120,
+      "sourceIds": [
+        "lopdp",
+        "riesgos"
+      ]
+    },
+    {
+      "id": "aprendizaje-automatico",
+      "term": "Aprendizaje automático",
+      "category": "cat-08",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Algoritmos que aprenden patrones de ejemplos para predecir o clasificar.",
+      "example": "Sistema que identifica correos sospechosos.",
+      "reference": "SPDP, Guía Riesgos v2, I.0 «Modelos de aprendizaje automático».",
+      "slide": 120,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "analitica-predictiva",
+      "term": "Analítica predictiva",
+      "category": "cat-08",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Uso de información para estimar escenarios futuros.",
+      "example": "Prever días con alta probabilidad de fraude.",
+      "reference": "SPDP, Guía Riesgos v2, I.0; II.3.",
+      "slide": 121,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "privacidad-diferencial",
+      "term": "Privacidad diferencial",
+      "category": "cat-08",
+      "classification": "Explicación Técnica",
+      "definition": "Técnicas que limitan cuánto revela un resultado sobre cada individuo.",
+      "example": "Publicar cifras de uso sin exponer respuestas particulares.",
+      "reference": "SPDP, Guía desde Diseño §2.1.2 «Ofuscar» (referencia técnica).",
+      "slide": 121,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "esteganografia",
+      "term": "Esteganografía",
+      "category": "cat-08",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Técnica para ocultar información dentro de otro contenido.",
+      "example": "Esconder datos en una imagen, sin que resulte evidente.",
+      "reference": "SPDP, Guía desde Diseño §2.1.2 «Ofuscar».",
+      "slide": 122,
+      "sourceIds": [
+        "diseno"
+      ]
+    },
+    {
+      "id": "estandar-iso-iec-27001",
+      "term": "Estándar ISO/IEC 27001",
+      "category": "cat-08",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Norma de requisitos para administrar seguridad de información.",
+      "example": "Organización define riesgos, objetivos y controles auditables.",
+      "reference": "SPDP, Guía Riesgos v2, I.3 (estándares mejores prácticas).",
+      "slide": 122,
+      "sourceIds": [
+        "riesgos"
+      ]
+    },
+    {
+      "id": "estandar-iso-iec-27701",
+      "term": "Estándar ISO/IEC 27701",
+      "category": "cat-08",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Norma de gestión de privacidad aplicada al tratamiento de datos.",
+      "example": "Definir funciones y medidas para procesos de privacidad.",
+      "reference": "SPDP, Guía Riesgos v2, I.3 (mejores prácticas); Anexo Programa DPD B2.1.",
+      "slide": 123,
+      "sourceIds": [
+        "riesgos",
+        "programa"
+      ]
+    },
+    {
+      "id": "owasp-top-10",
+      "term": "OWASP Top 10",
+      "category": "cat-08",
+      "classification": "Concepto De Guía Spdp",
+      "definition": "Lista de categorías frecuentes de riesgos en aplicaciones web.",
+      "example": "Usarla para revisar controles de un portal de clientes.",
+      "reference": "SPDP, Anexo Programa DPD, Bloque 2.1; Guía Riesgos v2, I.3.",
+      "slide": 123,
+      "sourceIds": [
+        "riesgos",
+        "programa"
+      ]
+    },
+    {
+      "id": "ley2026-servicio-esencial",
+      "term": "Servicio esencial",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Actividad cuya interrupción grave pondría en peligro aspectos como la salud, seguridad, vida, orden público o estabilidad económica del país.",
+      "example": "Un apagón prolongado en el sistema que abastece de electricidad a hospitales pone en riesgo la atención médica.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 4, literal g), incorporado al art. 5.g de la LOTDA.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-infraestructura-critica-digital",
+      "term": "Infraestructura crítica digital",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Sistemas, redes y servicios tecnológicos indispensables para mantener seguros y operativos servicios esenciales o la seguridad nacional.",
+      "example": "La plataforma digital que controla el suministro de agua de una ciudad es un soporte de un servicio esencial.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 4, literal h), incorporado al art. 5.h de la LOTDA.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-ciberataque",
+      "term": "Ciberataque",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Acción intencional realizada por medios digitales para alterar, inutilizar, manipular o acceder sin permiso a sistemas, servicios o información.",
+      "example": "Una persona envía software malicioso a la clínica para robar sus historiales médicos.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 4, literal j), incorporado al art. 5.j de la LOTDA.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-incidente-de-ciberseguridad",
+      "term": "Incidente de ciberseguridad",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Evento malicioso, accidental, técnico o natural que compromete o puede comprometer sistemas, servicios o información digital.",
+      "example": "Un servidor de turnos médicos se cae por una falla técnica, aunque nadie lo haya atacado.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 4, literal m), incorporado al art. 5.m de la LOTDA.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-resiliencia-digital",
+      "term": "Resiliencia digital",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Capacidad de prepararse, soportar, adaptarse y recuperarse tras un incidente sin dejar de sostener los servicios esenciales.",
+      "example": "Un hospital continúa atendiendo con sistemas alternativos mientras recupera su plataforma principal.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 4, literal n), incorporado al art. 5.n de la LOTDA.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-catalogo-nacional-de-servicios-esenciales-e-infraestructura-critica-digital",
+      "term": "Catálogo Nacional de Servicios Esenciales e Infraestructura Crítica Digital",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Instrumento público y actualizable que identifica y clasifica qué servicios e infraestructuras digitales están comprendidos en la ley.",
+      "example": "Una organización revisa si sus instalaciones o su servicio han sido incorporados al catálogo oficial.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 4, literal p), incorporado al art. 5.p de la LOTDA; art. 7-A, literal a).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-prestador-de-servicios-digitales-psd",
+      "term": "Prestador de servicios digitales (PSD)",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Persona o empresa que ofrece almacenamiento, procesamiento, transmisión, intermediación o protección de datos y sistemas por medios digitales.",
+      "example": "Un proveedor de nube que aloja el portal de pacientes de un hospital presta un servicio digital.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 4, literal q), incorporado al art. 5.q de la LOTDA.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-ente-rector-de-ciberseguridad",
+      "term": "Ente rector de ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Autoridad pública que dirige las políticas, lineamientos y coordinación nacionales en materia de ciberseguridad.",
+      "example": "Distintas instituciones siguen lineamientos generales emitidos por la autoridad rectora.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 3 (reforma al art. 3 LOTDA) y art. 7-A.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-control-de-danos",
+      "term": "Control de daños",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Principio de actuar rápidamente y con coordinación para que un incidente no se propague ni empeore.",
+      "example": "El equipo técnico desconecta de la red un computador infectado para proteger los demás.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal d).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-cooperacion-con-la-autoridad",
+      "term": "Cooperación con la autoridad",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Deber de colaborar con la autoridad competente en los asuntos y procedimientos de ciberseguridad que correspondan.",
+      "example": "Una empresa facilita el reporte técnico solicitado por la autoridad tras un incidente relevante.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal e).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-coordinacion-interinstitucional",
+      "term": "Coordinación interinstitucional",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Principio para que diferentes autoridades actúen conjuntamente y sin duplicar sus competencias.",
+      "example": "El regulador sectorial y la autoridad de ciberseguridad coordinan la gestión de un incidente hospitalario.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal f).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-respuesta-responsable",
+      "term": "Respuesta responsable",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Principio según el cual las medidas de ciberseguridad previstas en la ley son defensivas y no autorizan acciones ofensivas.",
+      "example": "Si una institución es atacada, contiene el incidente y reporta; no invade el sistema del atacante en represalia.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal h).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-proporcionalidad-en-ciberseguridad",
+      "term": "Proporcionalidad en ciberseguridad",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Principio de seleccionar medidas acordes al riesgo, importancia y sensibilidad de lo que se protege.",
+      "example": "Una historia clínica exige más medidas de protección que el catálogo público de eventos de una institución.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal i).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-neutralidad-tecnologica",
+      "term": "Neutralidad tecnológica",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Principio por el que las reglas no deben favorecer una tecnología, marca o proveedor concreto y promueven la interoperabilidad.",
+      "example": "Una entidad puede elegir distintas marcas de firewall si cumplen los requisitos de seguridad establecidos.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal l).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-responsabilidad-compartida",
+      "term": "Responsabilidad compartida",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Principio de distribuir obligaciones de prevención, protección, respuesta y recuperación según la función y los medios de cada actor.",
+      "example": "La nube protege sus servidores y el cliente gestiona las cuentas, permisos y datos de su aplicación, según el contrato y responsabilidades.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal m); art. 20-I.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-adaptabilidad-tecnologica",
+      "term": "Adaptabilidad tecnológica",
+      "category": "cat-09",
+      "classification": "Definición Normativa",
+      "definition": "Principio de actualizar políticas y controles ante riesgos derivados de tecnologías nuevas, como la computación cuántica.",
+      "example": "Una organización revisa periódicamente sus algoritmos de cifrado frente a nuevas recomendaciones técnicas.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-B, literal n).",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-politica-nacional-de-ciberseguridad",
+      "term": "Política Nacional de Ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Conjunto de orientaciones públicas que ordena los objetivos, prioridades y coordinación del país frente a los riesgos cibernéticos.",
+      "example": "El Estado articula iniciativas de formación, protección de servicios críticos y cooperación entre sectores.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 7-A, literal d); art. 20-C.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-coordinacion-con-la-autoridad-de-proteccion-de-datos-personales",
+      "term": "Coordinación con la autoridad de protección de datos personales",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Articulación con la SPDP cuando las acciones de ciberseguridad involucran tratamiento de datos personales, respetando la LOPDP.",
+      "example": "Un CSIRT coordina la respuesta técnica mientras la organización analiza la notificación de la vulneración de datos a la SPDP.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-E. No implica que todas las notificaciones a ambas autoridades sean equivalentes.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-gestion-de-incidentes-de-ciberseguridad",
+      "term": "Gestión de incidentes de ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Proceso organizado de prevención, monitoreo, detección, evaluación, notificación, contención y recuperación ante eventos de seguridad.",
+      "example": "Ante un ransomware, un hospital detecta el problema, aísla equipos, activa contingencia y recupera sistemas.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-F.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-notificacion-de-incidentes-de-ciberseguridad-72-horas",
+      "term": "Notificación de incidentes de ciberseguridad (72 horas)",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Comunicación de incidentes relevantes por sujetos obligados en los supuestos legales, sin demora y como máximo 72 horas desde su detección.",
+      "example": "Una entidad pública detecta un incidente que afecta un servicio esencial y activa el reporte al ente rector por el canal correspondiente.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-G. La obligación del art. 20-G alcanza a entidades públicas y operadores de infraestructura crítica digital, con canal sectorial especial cuando corresponda. No sustituye los deberes de la LOPDP.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-csirt-nacional",
+      "term": "CSIRT Nacional",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Equipo técnico que coordina la prevención y respuesta frente a incidentes relevantes en entidades públicas, infraestructura crítica y servicios digitales.",
+      "example": "Tras un incidente en varios hospitales, coordina alertas técnicas y medidas de respuesta entre instituciones.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-H.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-csirt-sectorial",
+      "term": "CSIRT sectorial",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Equipo de respuesta a incidentes especializado en un sector que se coordina con el CSIRT Nacional.",
+      "example": "Un CSIRT del sector financiero gestiona alertas de entidades financieras y comparte información relevante.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-H.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-punto-de-contacto-tecnico-24-7",
+      "term": "Punto de contacto técnico 24/7",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Canal o responsable técnico disponible de forma continua para coordinar incidentes según las obligaciones de cada sujeto.",
+      "example": "El responsable de un operador de infraestructura crítica atiende una alerta a las 02:00 para coordinar con el CSIRT.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), arts. 20-I, literal e), y 20-J. El art. 20-J exige disponibilidad 24/7 a entidades públicas y operadores de infraestructura crítica; los PSD deben pactar contacto técnico permanente con clientes.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-hacking-etico-autorizado",
+      "term": "Hacking ético autorizado",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Prueba controlada de seguridad para descubrir debilidades, realizada con autorización escrita y límites definidos.",
+      "example": "Una institución autoriza por escrito a especialistas a revisar su portal web durante dos días sin modificar datos reales.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-L.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-registro-nacional-de-profesionales-y-empresas-de-pruebas-de-seguridad",
+      "term": "Registro Nacional de Profesionales y Empresas de Pruebas de Seguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Registro previsto por la ley para quienes realizan actividades de hacking ético, sujeto a requisitos y desarrollo operativo técnico.",
+      "example": "Una empresa de pentesting revisa las exigencias de inscripción y certificaciones antes de ofrecer pruebas a un operador crítico.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-L, literal c). La ley prevé desarrollo mediante normativa técnica y operatividad progresiva; no se presume que el registro ya esté funcionando.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-tecnologia-operacional-ot",
+      "term": "Tecnología operacional (OT)",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Tecnología que supervisa o controla procesos físicos, como bombas, maquinaria y sistemas industriales.",
+      "example": "El sistema que abre una válvula de una planta de tratamiento de agua es tecnología operacional.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-LL, literal d). El artículo menciona OT como criterio de clasificación; la explicación es técnica y educativa.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-clasificacion-de-infraestructura-critica-digital",
+      "term": "Clasificación de infraestructura crítica digital",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Proceso de evaluar qué sistemas son críticos por su impacto, dependencias y relación con servicios esenciales.",
+      "example": "Una autoridad considera si la falla de un centro de control eléctrico afectaría a hospitales y transporte.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-LL.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-fiscalizacion-tecnica-de-ciberseguridad",
+      "term": "Fiscalización técnica de ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Revisión de cumplimiento técnico por la autoridad competente, respetando las competencias de supervisores sectoriales.",
+      "example": "El organismo de control de un sector revisa si el operador implementó medidas obligatorias de seguridad.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-M.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-comite-nacional-de-ciberseguridad",
+      "term": "Comité Nacional de Ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Instancia de coordinación estratégica entre instituciones para formular y seguir la política nacional de ciberseguridad.",
+      "example": "Distintas autoridades revisan prioridades nacionales de protección de servicios esenciales.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-N.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-cooperacion-internacional-en-ciberseguridad",
+      "term": "Cooperación internacional en ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Colaboración entre países, equipos de respuesta y organismos para intercambiar información y mejorar la defensa digital.",
+      "example": "Un CSIRT nacional comparte alertas sobre una campaña de ransomware que afecta a varios países.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-Ñ.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-infracciones-de-ciberseguridad",
+      "term": "Infracciones de ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Incumplimientos administrativos que la ley clasifica como leves, graves y muy graves en los supuestos y condiciones previstos.",
+      "example": "Ocultar deliberadamente un incidente crítico puede constituir una infracción muy grave cuando concurren los requisitos legales.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), arts. 20-P a 20-U. Considerar ámbitos de aplicación, disposiciones transitorias y autoridades competentes para analizar cada caso.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-regimenes-especiales-de-ciberseguridad",
+      "term": "Regímenes especiales de ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Régimen de determinadas funciones e instituciones del Estado para proteger sus sistemas, con mecanismos de reporte y cooperación diferenciados.",
+      "example": "Un órgano estatal con régimen especial establece seguridad y coordina reportes sin quedar bajo idéntica fiscalización del ente rector.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), art. 20-O.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    },
+    {
+      "id": "ley2026-ejercicios-y-simulacros-de-ciberseguridad",
+      "term": "Ejercicios y simulacros de ciberseguridad",
+      "category": "cat-09",
+      "classification": "Concepto Legal Aplicado",
+      "definition": "Prácticas planificadas para comprobar la respuesta a incidentes y fortalecer la preparación institucional.",
+      "example": "Un hospital simula una caída de su sistema de emergencias para verificar si los equipos saben activar el plan alterno.",
+      "reference": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad, R.O. 290 (22-05-2026), arts. 20-H y 20-K.",
+      "sourceIds": [
+        "ley-ciber-2026"
+      ],
+      "law2026": true,
+      "slide": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "lopdp",
+      "name": "Ley Orgánica de Protección de Datos Personales (LOPDP)",
+      "kind": "Ley",
+      "url": "https://www.spdp.gob.ec/marco-normativo/",
+      "note": "Consultar el texto vigente en la sección normativa de la SPDP."
+    },
+    {
+      "id": "reglamento",
+      "name": "Reglamento General de la LOPDP",
+      "kind": "Reglamento",
+      "url": "https://www.spdp.gob.ec/marco-normativo/",
+      "note": "Acceso al Reglamento General y otras normas aplicables."
+    },
+    {
+      "id": "riesgos",
+      "name": "Guía de Gestión de Riesgos y Evaluación de Impacto · Versión 2",
+      "kind": "Guía SPDP",
+      "url": "https://www.spdp.gob.ec/docs/guias/",
+      "note": "Buscar la versión 2 de la guía; se conserva la cita de versión y sección de la presentación original. Los enlaces directos a PDF pueden cambiar."
+    },
+    {
+      "id": "diseno",
+      "name": "Guía de Protección de Datos desde el Diseño y por Defecto",
+      "kind": "Guía SPDP",
+      "url": "https://spdp.gob.ec/wp-content/uploads/2025/10/40.02-Guia-de-Proteccion-de-Datos-desde-el-Diseno-y-por-Defecto.pdf",
+      "note": "Guía oficial de la SPDP."
+    },
+    {
+      "id": "resoluciones",
+      "name": "Resoluciones de la SPDP (anonimización, transferencias, gran escala, biometría)",
+      "kind": "Resoluciones",
+      "url": "https://www.spdp.gob.ec/resoluciones/",
+      "note": "Buscar por el número de resolución indicado en cada tarjeta."
+    },
+    {
+      "id": "programa",
+      "name": "Programa profesionalizante de Delegados de Protección de Datos",
+      "kind": "Programa académico",
+      "url": "https://www.spdp.gob.ec/resoluciones/",
+      "note": "Consultar la resolución del programa profesionalizante y su anexo."
+    },
+    {
+      "id": "nist",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "kind": "Marco técnico",
+      "url": "https://www.nist.gov/cyberframework",
+      "note": "Marco de buenas prácticas; no equivale a exigencia legal ecuatoriana automática."
+    },
+    {
+      "id": "owasp",
+      "name": "OWASP Top 10",
+      "kind": "Marco técnico",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "note": "Marco de referencia para riesgos en aplicaciones web."
+    },
+    {
+      "id": "ley-ciber-2026",
+      "name": "Ley Orgánica para el Fortalecimiento de la Ciberseguridad (Ecuador, 2026)",
+      "kind": "Ley vigente · 2026",
+      "url": "https://esacc.corteconstitucional.gob.ec/storage/api/v1/10_DWL_FL/eyJjYXJwZXRhIjoicm8iLCJ1dWlkIjoiYTU2YzBiOTQtNzU3ZC00YzQ3LTk2NTItMTJiNjFkZGZiMDQzLnBkZiJ9",
+      "note": "Publicada en el Quinto Suplemento del Registro Oficial N.º 290, 22-05-2026. En su art. 4 incorpora 11 definiciones al art. 5 de la Ley Orgánica para la Transformación Digital y Audiovisual; art. 6 incorpora el Título de Ciberseguridad (arts. 20-A y siguientes).",
+      "landingUrl": "https://www.registroficial.gob.ec/quinto-suplemento-no-290/"
+    }
+  ]
+}

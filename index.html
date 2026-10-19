@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0b1731">
+  <meta name="description" content="200 conceptos de ciberseguridad, la ley ecuatoriana de 2026 y protección de datos personales: definiciones sencillas, ejemplos cotidianos y referencias a fuentes oficiales de Ecuador.">
+  <meta name="author" content="Víctor Vera">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Glosario de ciberseguridad para DPD | Víctor Vera">
+  <meta property="og:description" content="200 términos técnicos, nueve categorías, ejemplos fáciles de entender y bibliografía consultable.">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Glosario de Ciberseguridad para DPD · Víctor Vera</title>
+</head>
+<body>
+  <a class="skip" href="#explorar">Saltar al glosario</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio del glosario">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3 27 8v8c0 7-5 11-11 13C10 27 5 23 5 16V8l11-5Z" stroke="currentColor" stroke-width="2"/><path d="m10 16 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy"><strong>Glosario Ciber</strong><small>Protección de datos personales</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#categorias">Categorías</a><a href="#explorar">Explorar términos</a><a href="#bibliografia">Bibliografía</a>
+      </nav>
+      <button class="theme-btn" id="themeToggle" type="button" aria-label="Cambiar tema de color" title="Cambiar entre modo claro y oscuro"><span id="themeIcon" aria-hidden="true">☾</span><span class="theme-word">Tema</span></button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orb one" aria-hidden="true"></div><div class="hero-orb two" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> GUÍA DE CONSULTA · MÓDULO 1</div>
+          <h1 id="hero-title">El lenguaje de la <span>ciberseguridad</span>, explicado sin tecnicismos.</h1>
+          <p>Una biblioteca visual para comprender los términos que utiliza un <strong>Delegado de Protección de Datos (DPD)</strong>: definición clara, ejemplo cotidiano y referencia documental.</p>
+          <div class="hero-actions"><a class="primary-btn" href="#explorar">Explorar el glosario <span aria-hidden="true">↗</span></a><a class="ghost-btn" href="#categorias">Ver las categorías <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-byline">Fundamentos, normativa y aplicación práctica de la ciberseguridad <span class="byline-dot">·</span> <strong>Víctor Vera</strong></div>
+        </div>
+        <div class="hero-visual" aria-label="Tres pilares de la seguridad de la información: confidencialidad, integridad y disponibilidad">
+          <div class="visual-top"><span class="visual-pulse"></span><span>FUNDAMENTOS DE SEGURIDAD</span><span>01 / 08</span></div>
+          <div class="visual-badge">CIA<span>+</span></div>
+          <div class="visual-title">Tres conceptos para empezar</div>
+          <div class="cia-row"><div><span class="cia-letter blue">C</span><span><b>Confidencialidad</b><small>Solo quien tiene autorización</small></span></div><div><span class="cia-letter green">I</span><span><b>Integridad</b><small>Información correcta y completa</small></span></div><div><span class="cia-letter violet">A</span><span><b>Disponibilidad</b><small>Acceso cuando se necesita</small></span></div></div>
+          <div class="visual-foot"><span class="tiny-spark">✧</span> Seguridad que protege sistemas y personas</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-wrap" aria-label="Características de este glosario"><div class="container stats-grid">
+      <div class="stat"><span class="stat-icon" aria-hidden="true">▦</span><div><strong id="termTotal">200</strong><span>Términos explicados</span></div></div>
+      <div class="stat"><span class="stat-icon" aria-hidden="true">◈</span><div><strong id="catTotal">9</strong><span>Áreas de conocimiento</span></div></div>
+      <div class="stat"><span class="stat-icon" aria-hidden="true">⌁</span><div><strong>100%</strong><span>Con ejemplo cotidiano</span></div></div>
+      <div class="stat"><span class="stat-icon" aria-hidden="true">☷</span><div><strong>Fuentes</strong><span>Normativas y técnicas</span></div></div>
+    </div></section>
+
+    <section class="categories-section container" id="categorias" aria-labelledby="categories-title">
+      <div class="section-top"><div><p class="section-kicker">APRENDE POR TEMAS</p><h2 id="categories-title">Nueve categorías. Una misma perspectiva.</h2><p class="section-subtitle">Selecciona una categoría y descubre sus conceptos. Puedes volver a verlos todos en cualquier momento.</p></div><button id="allCategories" type="button" class="text-button">Mostrar todas <span aria-hidden="true">→</span></button></div>
+      <div class="category-grid" id="categoryGrid"><p class="loading-text">Preparando categorías…</p></div>
+    </section>
+
+    <section class="explorer-section" id="explorar" aria-labelledby="explorer-title">
+      <div class="container">
+        <div class="section-top explore-head"><div><p class="section-kicker">CONSULTA INTERACTIVA</p><h2 id="explorer-title">Explora cada término</h2><p class="section-subtitle">Busca por palabra, definición, ejemplo o referencia. Guarda tus conceptos favoritos.</p></div><div class="results-bubble" id="resultsCount" aria-live="polite">Cargando…</div></div>
+        <div class="filter-bar" role="search" aria-label="Filtros del glosario">
+          <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="sr-only">Buscar términos</span><input type="search" id="searchInput" placeholder="Buscar: phishing, MFA, cifrado, derechos…" autocomplete="off"><kbd>/</kbd></label>
+          <label class="filter-select"><span class="sr-only">Filtrar por categoría</span><select id="categorySelect"><option value="all">Todas las categorías</option></select></label>
+          <label class="filter-select filter-type"><span class="sr-only">Filtrar por tipo de fuente</span><select id="typeSelect"><option value="all">Todos los enfoques</option><option value="Definición Normativa">Definición normativa</option><option value="Concepto De Guía Spdp">Guía SPDP</option><option value="Explicación Técnica">Explicación técnica</option><option value="Concepto Legal Aplicado">Concepto legal aplicado</option></select></label>
+          <button id="favsOnly" type="button" class="favorites-filter" aria-pressed="false"><span aria-hidden="true">☆</span><span>Guardados</span></button>
+          <button id="resetFilters" type="button" class="reset-btn" title="Limpiar filtros">Limpiar</button>
+        </div>
+        <div class="browse-options"><span id="activeFilterText">Todos los términos</span><label>Ordenar <select id="sortSelect"><option value="original">Orden del programa</option><option value="az">Alfabético A–Z</option><option value="za">Alfabético Z–A</option></select></label></div>
+        <div id="termResults" aria-live="off"><p class="loading-text">Cargando las fichas del glosario…</p></div>
+      </div>
+    </section>
+
+    <section class="bibliography-section container" id="bibliografia" aria-labelledby="sources-title"><div class="section-top"><div><p class="section-kicker">RESPALDO DOCUMENTAL</p><h2 id="sources-title">Bibliografía y referencias</h2><p class="section-subtitle">En cada ficha se conserva la referencia usada en la presentación académica y la actualización legal de 2026. Consulta las fuentes oficiales para su aplicación.</p></div></div><div id="sourceGrid" class="sources-grid"></div><div class="editorial-note"><span aria-hidden="true">ⓘ</span><p><strong>Nota metodológica:</strong> las explicaciones y los ejemplos se adaptaron para enseñanza. Una referencia puede contener la definición, mencionar la tecnología o contextualizar el control; no implica que la frase sea una transcripción literal de la norma ni que una buena práctica sea obligatoria en todos los casos. Revisa modificaciones normativas antes de utilizar el glosario como fundamento jurídico.</p></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-grid"><div><strong>Glosario Ciber</strong><p>Fundamentos, normativa y aplicación práctica de la ciberseguridad.</p></div><div><span>Material académico · Víctor Vera</span><span>Basado en la presentación del Módulo 1 · Octubre de 2026</span></div><a href="#inicio" class="back-top">Volver arriba ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
