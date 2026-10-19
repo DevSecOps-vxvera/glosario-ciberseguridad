@@ -1,4 +1,4 @@
-# Glosario técnico de ciberseguridad para DPD
+# Glosario técnico de ciberseguridad
 
 Sitio estático y adaptable a móviles para el programa **Fundamentos, normativa y aplicación práctica de la ciberseguridad**, Módulo 1, **Víctor Vera**. Preparado para GitHub Pages y basado en el glosario ampliado de la presentación `Modulo1_Fundamentos_Ciberseguridad_ECOTEC_Victor_Vera.pptx`.
 
